@@ -13,7 +13,7 @@ const NavBar = () => {
           <Link to={"/"}>
             <img
               className="h-[50px] w-[100px] rounded-md"
-              src="/public/vix logo-dark.jpg"
+              src="/vixplus_logo.jpg"
               alt="logo"
             />
           </Link>
