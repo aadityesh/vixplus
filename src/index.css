@@ -6,9 +6,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: white;
 
   ::-webkit-scrollbar {
-    width: 6px; /* Adjust the width of the scrollbar */
+    width: 2px; /* Adjust the width of the scrollbar */
   }
 
   ::-webkit-scrollbar-thumb {
@@ -28,5 +29,5 @@
 }
 
 .sidebar {
-  scrollbar-width: none;
+  scrollbar-width: 1px;
 }

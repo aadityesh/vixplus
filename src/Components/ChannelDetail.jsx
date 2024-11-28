@@ -9,12 +9,12 @@ const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null);
   const [videos, setVideos] = useState([]);
 
-  console.log(channelDetail);
+  // console.log(channelDetail);
   // console.log(videos);f
 
   useEffect(() => {
     fetchFromAPI(`channels?part=snippet&id=${id}`).then((data) => {
-      console.log(data);
+      // console.log(data);
       setChannelDetail(data?.items[0]);
     });
 
@@ -36,7 +36,7 @@ const ChannelDetail = () => {
         <div className="flex min-w-[100%] items-center justify-center">
           <ChannelCard channelDetail={channelDetail} marginTop="-100px" />
         </div>
-        <Box display="flex" p="2">
+        <Box display="flex" p="2" color="#fff">
           <Box sx={{ mr: { sm: "100px" } }} />
           <Videos videos={videos} />
         </Box>

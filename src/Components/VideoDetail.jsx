@@ -36,7 +36,7 @@ const VideoDetail = () => {
   return (
     <>
       <Box minHeight="95vh" backgroundColor="black">
-        <Stack direction={{ xs: "column", md: "row" }}>
+        <section className="flex flex-col">
           <Box flex={1}>
             <Box
               sx={{
@@ -47,7 +47,8 @@ const VideoDetail = () => {
               }}
             >
               <ReactPlayer
-                className="min-h-[70vh] min-w-[100%]"
+                width="100%"
+                height="50vh"
                 url={`https://www.youtube.com/watch?v=${id}`}
                 controls
               />
@@ -96,7 +97,7 @@ const VideoDetail = () => {
           >
             <Videos videos={videos} direction="column" />
           </Box>
-        </Stack>
+        </section>
       </Box>
     </>
   );

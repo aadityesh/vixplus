@@ -34,29 +34,7 @@ const iconMap = new Map([
 const SideBar = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <>
-      <Stack
-        direction={"row"}
-        className="sidebar"
-        sx={{
-          height: { sx: "auto", md: "95%" },
-          width: {
-            md: "125px",
-            lg: "200px",
-            sm: "100%",
-          },
-          position: "fixed",
-          top: { sm: "70px", md: "90px" },
-          marginBottom: { sm: "40px" },
-          left: 0,
-          flexDirection: { md: "column" },
-          gap: "20px",
-          overflowY: { md: "auto" },
-          overflowX: { sm: "auto", md: "none" },
-          padding: "4px",
-          scrollbarWidth: "1px",
-          backgroundColor: "black",
-        }}
-      >
+      <section className="sidebar fixed left-0 flex w-full overflow-x-auto bg-black px-1 pt-[13px] lg:top-[85px] lg:w-[150px] lg:flex-col lg:gap-4">
         {Array.from(iconMap.entries()).map(([key, value]) => (
           <button
             key={key}
@@ -67,7 +45,7 @@ const SideBar = ({ selectedCategory, setSelectedCategory }) => {
             <span>{key}</span>
           </button>
         ))}
-      </Stack>
+      </section>
     </>
   );
 };

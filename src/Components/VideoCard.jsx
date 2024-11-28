@@ -28,31 +28,16 @@ const VideoCard = ({
   return (
     <>
       {/* <h1>hello</h1> */}
-      <Card
-        sx={{
-          width: { md: "320px", xs: "100%" },
-          color: "white",
-          borderRadius: 0,
-        }}
-      >
+      <section className="w-[300px] rounded-md">
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-          <CardMedia
-            image={snippet?.thumbnails?.high?.url}
-            alt={snippet?.title}
-            sx={{
-              width: {
-                md: 358,
-                sm: "100%",
-              },
-              height: 180,
-            }}
-          />
+          <img src={snippet?.thumbnails?.medium?.url} className="w-[300px]" />
         </Link>
-        <CardContent sx={{ backgroundColor: "#1e1e1e", height: "106px" }}>
+        <section className="flex h-[80px] flex-col justify-between bg-[#1e1e1e] p-1">
           <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-            <Typography variant="subtitle1" fontWeight="bold">
+            <p className="font-semibold">
+              {" "}
               {he.decode(snippet?.title.slice(0, 60)) || demoVideoTitle}
-            </Typography>
+            </p>
           </Link>
           <Link
             to={
@@ -61,13 +46,13 @@ const VideoCard = ({
                 : demoChannelUrl
             }
           >
-            <Typography variant="subtitle1" fontWeight="bold">
+            <p className="font-bold">
               {he.decode(snippet?.channelTitle) || demoChannelTitle}
               <CheckCircle sx={{ fontSize: 12, color: "gray", ml: "5px" }} />
-            </Typography>
+            </p>
           </Link>
-        </CardContent>
-      </Card>
+        </section>
+      </section>
     </>
   );
 };

@@ -13,13 +13,13 @@ const Feed = () => {
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
       setVideos(data.items);
-      console.log(videos);
+      // console.log(videos);
     });
   }, [selectedCategory]);
-
+  // console.log(videos);
   return (
     <>
-      <div className="flex min-h-[90vh] flex-col overflow-hidden bg-black text-white md:flex-row">
+      <div className="flex min-h-[90vh] flex-col overflow-hidden bg-black text-white lg:flex-row">
         <section className="min-w-[15%] md:border-r-2 md:border-slate-400">
           <SideBar
             selectedCategory={selectedCategory}
@@ -27,7 +27,7 @@ const Feed = () => {
           />
           {/* <p className="sticky">Copyright VixPlus Media Group</p> */}
         </section>
-        <section className="flex-2 min-w-[90vh] overflow-y-auto p-2 pb-2 pl-4 pt-[42px] md:pt-0">
+        <section className="flex-2 min-w-full p-2 pt-[80px] md:pt-[100px] lg:pt-[20px]">
           <Title title={selectedCategory} />
           <Videos videos={videos} />
         </section>

@@ -24,6 +24,7 @@ const ChannelCard = ({ channelDetail, marginTop = "0px" }) => {
           justifyContent: "center",
           width: { xs: "356px", md: "320px" },
           marginTop: marginTop,
+          color: "#fff",
         }}
       >
         <Link to={`/channel/${channelDetail?.id?.channelId}`}>
@@ -49,6 +50,7 @@ const ChannelCard = ({ channelDetail, marginTop = "0px" }) => {
                 width: "180px",
                 mb: 2,
                 border: "1px solid #e3e3e3",
+                color: "#fff",
               }}
             />
             <Typography variant="h6" fontWeight="bold">
